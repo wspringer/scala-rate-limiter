@@ -20,5 +20,6 @@ val times2Limited = limit(times2 _)
 
 times2Limited(2) // Future(4)
 times2Limited(3) // Future(6)
+times2Limited(4) // Will not start executing for a while
 ```
 
