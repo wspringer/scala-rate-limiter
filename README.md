@@ -2,7 +2,7 @@
 
 Rate limiting should not be something you have to implement yourself. Ideally, you should be able to get it by just wrapping your function into something that magically transforms it into something that is making sure you're not invoking it too often (postponing it if you do invoke it more than you should.) That's what this prototype is doing.
 
-It's currently limited to limiting `A => B` type of functions, that is function with one argument only. But with the right implicits you should be able to get it working for functions up to 22 arguments. 
+It's currently limited to limiting `A => B` type of functions, that is functions with one argument only. But with the right implicits you should be able to get it working for functions up to 22 arguments. 
 
 ```scala
 import nl.flotsam.rate._
