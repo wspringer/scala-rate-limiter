@@ -14,7 +14,7 @@ import ExecutionContext.global
 
 def times2(i: Int) = i * 2
 
-val limit = RateLimitation(2 per (5 seconds))
+val limit = RateLimit(2 per (5 seconds))
 
 val times2Limited = limit(times2 _)
 

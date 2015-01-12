@@ -12,7 +12,7 @@ class RateLimitationSpec extends Specification {
   "The rate limiter" should {
 
     "allow you to prevent something from getting executed too often" in {
-      val limit = RateLimitation(2 per (10 seconds))
+      val limit = RateLimit(2 per (10 seconds))
       def times2(i: Int) = i * 2
       val times2Limited = limit(times2 _)
       val attempts = for (i <- List(1, 2, 3)) yield times2Limited(i)

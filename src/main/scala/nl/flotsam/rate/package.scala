@@ -11,7 +11,7 @@ package object rate {
     override def toString: String = s"$number per $duration"
   }
 
-  case class RateLimitation(rate: Rate) {
+  case class RateLimit(rate: Rate) {
 
     private val limiter = RateLimiter.create(rate.number / (rate.duration / (1 second)))
 
