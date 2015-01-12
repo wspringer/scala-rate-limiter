@@ -23,3 +23,6 @@ times2Limited(3) // Future(6)
 times2Limited(4) // Will not start executing for a while
 ```
 
+### Limitations
+
+This particular implementation is blocking a thread for everything in a wait state. It does return a future, so your code will not be blocking on it, but there will be threads in a blocked state. Which is not exactly ideal, but was the quickest solution, using Google's Guava under the hood.
